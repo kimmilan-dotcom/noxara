@@ -1,13 +1,14 @@
 from telegram import Update
 from telegram.ext import Application, MessageHandler, CommandHandler, ContextTypes, filters
 import re
+import os
 import sqlite3
 from datetime import date, timedelta
 
 # ==================================================
 # ⚠️ PUT YOUR BOT TOKEN HERE
 # ==================================================
-TOKEN = "BOT_TOKEN"
+TOKEN = os.getenv("BOT_TOKEN")
 DATABASE = "noxara.db"
 
 INITIAL_ADMIN_IDS = {5747356891}
